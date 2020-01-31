@@ -1,0 +1,30 @@
+#include<stdio.h>
+#include<string.h>
+
+int main(){
+	
+	char All[100] = {'`','1','2','3','4','5','6','7','8','9','0','-','=','Q','W','E','R','T','Y','U','I','O','P','[',']','\\','A','S','D','F','G','H','J','K','L',';',39,'Z','X','C','V','B','N','M',',','.','/'};
+
+	int countAll = 47;
+	
+	char input[1000];
+	
+	while(gets(input)){
+		
+	for(int i=0;i<strlen(input);i++){
+		for(int j=0;j<countAll;j++){
+			if(All[j] == input[i]){
+				printf("%c",All[j-1]);
+			}
+			else if(input[i] == ' '){
+				printf(" ");
+				break;
+			}
+		}
+	}
+  
+		printf("\n");
+	}
+		
+	return 0;
+}
